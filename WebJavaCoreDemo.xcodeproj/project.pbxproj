@@ -13,6 +13,8 @@
 		F282CFB61DEE6E1200FE7873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F282CFB41DEE6E1200FE7873 /* Main.storyboard */; };
 		F282CFB81DEE6E1200FE7873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F282CFB71DEE6E1200FE7873 /* Assets.xcassets */; };
 		F282CFBB1DEE6E1200FE7873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F282CFB91DEE6E1200FE7873 /* LaunchScreen.storyboard */; };
+		F282CFC71DEE873D00FE7873 /* HXWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFC61DEE873D00FE7873 /* HXWebView.m */; };
+		F282CFCD1DEEA64D00FE7873 /* TSWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFCC1DEEA64D00FE7873 /* TSWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		F282CFB71DEE6E1200FE7873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F282CFBA1DEE6E1200FE7873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F282CFBC1DEE6E1200FE7873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F282CFC51DEE873D00FE7873 /* HXWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWebView.h; sourceTree = "<group>"; };
+		F282CFC61DEE873D00FE7873 /* HXWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWebView.m; sourceTree = "<group>"; };
+		F282CFCB1DEEA64D00FE7873 /* TSWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWebView.h; sourceTree = "<group>"; };
+		F282CFCC1DEEA64D00FE7873 /* TSWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				F282CFAF1DEE6E1200FE7873 /* AppDelegate.m */,
 				F282CFB11DEE6E1200FE7873 /* ViewController.h */,
 				F282CFB21DEE6E1200FE7873 /* ViewController.m */,
+				F282CFC51DEE873D00FE7873 /* HXWebView.h */,
+				F282CFC61DEE873D00FE7873 /* HXWebView.m */,
+				F282CFCB1DEEA64D00FE7873 /* TSWebView.h */,
+				F282CFCC1DEEA64D00FE7873 /* TSWebView.m */,
 				F282CFB41DEE6E1200FE7873 /* Main.storyboard */,
 				F282CFB71DEE6E1200FE7873 /* Assets.xcassets */,
 				F282CFB91DEE6E1200FE7873 /* LaunchScreen.storyboard */,
@@ -151,9 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F282CFCD1DEEA64D00FE7873 /* TSWebView.m in Sources */,
 				F282CFB31DEE6E1200FE7873 /* ViewController.m in Sources */,
 				F282CFB01DEE6E1200FE7873 /* AppDelegate.m in Sources */,
 				F282CFAD1DEE6E1200FE7873 /* main.m in Sources */,
+				F282CFC71DEE873D00FE7873 /* HXWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +324,7 @@
 				F282CFC11DEE6E1200FE7873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
