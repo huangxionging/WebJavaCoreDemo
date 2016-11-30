@@ -42,14 +42,15 @@
         
     } name: @"TEETH"];
     
+    // 添加 js 消息回调, 等待 js 调起原生
     [weakSelf.webView addScriptMessageHandlerBlock:^(WKScriptMessage *message) {
-        // 触发 js
+        // 触发 js/ 原生再次调 js
         [weakSelf.webView evaluateJavaScript: @"display_alert()" completionHandler:^(id obj, NSError * _Nullable error) {
             
         }];
     } name: @"xxx"];
     
-    // 注入 js 代码
+    // 注入 js 代码 alert 会使用 TSWebView 中的 WKUIDelegate 加载
     [weakSelf.webView addUserScript: [[WKUserScript alloc] initWithSource: @"function display_alert(){window.alert('I am an alert box!!')}" injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly: YES]];
     
     // 注入 js 代码 为网页添加内容
@@ -81,5 +82,10 @@
     return _webView;
 }
 
+- (void)dealloc {
+    [_webView removeAllScriptMessageHandlerBlock];
+    [_webView removeAllUserScripts];
+    
+}
 
 @end

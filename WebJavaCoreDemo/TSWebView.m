@@ -68,12 +68,12 @@
     [self.configuration.userContentController addScriptMessageHandler: scriptMessageHandler name: name];
 }
 
-#pragma mark- 添加脚本
+#pragma mark- 添加注入脚本
 - (void)addUserScript:(WKUserScript *)userScript {
     [self.configuration.userContentController addUserScript: userScript];
 }
 
-#pragma mark- 删除脚本
+#pragma mark- 删除注入脚本
 - (void)removeAllUserScripts {
     [self.configuration.userContentController removeAllUserScripts];
 }
@@ -87,12 +87,18 @@
 - (void)removeScriptMessageHandlerBlockForName:(NSString *)name {
     if (self.blockDictionary[name]) {
         [self.blockDictionary removeObjectForKey: name];
+        // 并删除脚本消息 handler 代理
+        [self removeScriptMessageHandlerForName: name];
     }
 }
 
 #pragma mark- 删除所有的脚本消息 handler 回调
 - (void)removeAllScriptMessageHandlerBlock {
-    [self.blockDictionary removeAllObjects];
+    __weak typeof(self) weakSelf = self;
+    [weakSelf.blockDictionary enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, void (^ _Nonnull obj)(id), BOOL * _Nonnull stop) {
+        [weakSelf removeScriptMessageHandlerForName: key];
+    }];
+//    [self.blockDictionary removeAllObjects];
 }
 
 #pragma mark- WKScriptMessageHandler
@@ -228,6 +234,7 @@
     
     return result;
 }
+
 
 
 
