@@ -38,7 +38,6 @@
  */
 - (void)addScriptMessageHandlerBlock:(void(^)(WKScriptMessage *message)) block name:(NSString *) name;
 
-
 /**
  自己添加脚本消息处理 handler, 其实就是调用了 WKUserContentController 的同名方法
  [self.configuration.userContentController addScriptMessageHandler: self name: name];
@@ -93,4 +92,9 @@
  */
 - (void)evaluateJavaScript:(NSString *)javaScriptString completionHandler:(void (^)(id, NSError *))completionHandler;
 
+
+/**
+ 如果想自己处理输入框, 警告框, 确认框
+ 请设置 WKWebView 的 UIDelegate 实现那三个方法 - (void)setUIDelegate:(id<WKUIDelegate>)UIDelegate
+ */
 @end
