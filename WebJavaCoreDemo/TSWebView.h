@@ -84,4 +84,13 @@
  */
 - (void)removeAllScriptMessageHandlerBlock;
 
+
+/**
+ 声明一下, 其实和父类方法一样
+
+ @param javaScriptString js脚本
+ @param completionHandler 完成回调
+ */
+- (void)evaluateJavaScript:(NSString *)javaScriptString completionHandler:(void (^)(id, NSError *))completionHandler;
+
 @end

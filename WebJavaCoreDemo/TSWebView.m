@@ -110,6 +110,11 @@
     }
 }
 
+#pragma mark- 执行 JavaScript 代码
+- (void)evaluateJavaScript:(NSString *)javaScriptString completionHandler:(void (^)(id, NSError *))completionHandler {
+    [super evaluateJavaScript:javaScriptString completionHandler:completionHandler];
+}
+
 #pragma mark- WKNavigationDelegate
 - (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
     
