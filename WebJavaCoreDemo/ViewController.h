@@ -10,7 +10,10 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)webToNative:(id)sender;
 
+- (IBAction)multiWebViewController:(id)sender;
+- (IBAction)singleWebViewController:(id)sender;
 
 @end
 

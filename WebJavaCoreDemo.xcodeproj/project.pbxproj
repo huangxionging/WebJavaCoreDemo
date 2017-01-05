@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F23B54A91E1DFC7200AA1664 /* TSWebToNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23B54A81E1DFC7200AA1664 /* TSWebToNativeViewController.m */; };
+		F24031371E1D026C00A9F482 /* TSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24031361E1D026C00A9F482 /* TSWebViewController.m */; };
+		F240313D1E1D244E00A9F482 /* TSSingleWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F240313C1E1D244E00A9F482 /* TSSingleWebViewController.m */; };
 		F282CFAD1DEE6E1200FE7873 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFAC1DEE6E1200FE7873 /* main.m */; };
 		F282CFB01DEE6E1200FE7873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFAF1DEE6E1200FE7873 /* AppDelegate.m */; };
 		F282CFB31DEE6E1200FE7873 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFB21DEE6E1200FE7873 /* ViewController.m */; };
@@ -17,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F23B54A71E1DFC7200AA1664 /* TSWebToNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWebToNativeViewController.h; sourceTree = "<group>"; };
+		F23B54A81E1DFC7200AA1664 /* TSWebToNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSWebToNativeViewController.m; sourceTree = "<group>"; };
+		F24031351E1D026C00A9F482 /* TSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWebViewController.h; sourceTree = "<group>"; };
+		F24031361E1D026C00A9F482 /* TSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSWebViewController.m; sourceTree = "<group>"; };
+		F240313B1E1D244E00A9F482 /* TSSingleWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSingleWebViewController.h; sourceTree = "<group>"; };
+		F240313C1E1D244E00A9F482 /* TSSingleWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSingleWebViewController.m; sourceTree = "<group>"; };
 		F282CFA81DEE6E1200FE7873 /* WebJavaCoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebJavaCoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F282CFAC1DEE6E1200FE7873 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F282CFAE1DEE6E1200FE7873 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F23B54A61E1DFC2900AA1664 /* TSWeb */ = {
+			isa = PBXGroup;
+			children = (
+				F282CFCB1DEEA64D00FE7873 /* TSWebView.h */,
+				F282CFCC1DEEA64D00FE7873 /* TSWebView.m */,
+				F24031351E1D026C00A9F482 /* TSWebViewController.h */,
+				F24031361E1D026C00A9F482 /* TSWebViewController.m */,
+				F240313B1E1D244E00A9F482 /* TSSingleWebViewController.h */,
+				F240313C1E1D244E00A9F482 /* TSSingleWebViewController.m */,
+			);
+			name = TSWeb;
+			sourceTree = "<group>";
+		};
 		F282CF9F1DEE6E1100FE7873 = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +87,9 @@
 				F282CFAF1DEE6E1200FE7873 /* AppDelegate.m */,
 				F282CFB11DEE6E1200FE7873 /* ViewController.h */,
 				F282CFB21DEE6E1200FE7873 /* ViewController.m */,
-				F282CFCB1DEEA64D00FE7873 /* TSWebView.h */,
-				F282CFCC1DEEA64D00FE7873 /* TSWebView.m */,
+				F23B54A71E1DFC7200AA1664 /* TSWebToNativeViewController.h */,
+				F23B54A81E1DFC7200AA1664 /* TSWebToNativeViewController.m */,
+				F23B54A61E1DFC2900AA1664 /* TSWeb */,
 				F282CFB41DEE6E1200FE7873 /* Main.storyboard */,
 				F282CFB71DEE6E1200FE7873 /* Assets.xcassets */,
 				F282CFB91DEE6E1200FE7873 /* LaunchScreen.storyboard */,
@@ -110,7 +133,7 @@
 		F282CFA01DEE6E1100FE7873 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = huangxiong;
 				TargetAttributes = {
 					F282CFA71DEE6E1200FE7873 = {
@@ -158,8 +181,11 @@
 			files = (
 				F282CFCD1DEEA64D00FE7873 /* TSWebView.m in Sources */,
 				F282CFB31DEE6E1200FE7873 /* ViewController.m in Sources */,
+				F240313D1E1D244E00A9F482 /* TSSingleWebViewController.m in Sources */,
+				F23B54A91E1DFC7200AA1664 /* TSWebToNativeViewController.m in Sources */,
 				F282CFB01DEE6E1200FE7873 /* AppDelegate.m in Sources */,
 				F282CFAD1DEE6E1200FE7873 /* main.m in Sources */,
+				F24031371E1D026C00A9F482 /* TSWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +229,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -251,6 +278,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
