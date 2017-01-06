@@ -58,13 +58,13 @@
 
 - (IBAction)multiWebViewController:(id)sender {
     
-    TSWebViewController *webVC = [[TSWebViewController alloc] initWithURL: @"http://32teeth.cn/doctor/api/dump?uid=40f595d7a10fbdeef11280cca5837bc8&token=eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiI0MGY1OTVkN2ExMGZiZGVlZjExMjgwY2NhNTgzN2JjODE0ODM2OTA3MzgzNjYifQ.4IwafHwqZBn2VulXOxsHnYddcxOGzjvd-DgNOHCO4dvzJ_-_QhKPSZ0hcQhUxhcqDNdfJkQYJNCsBn0SJTViyQ&x=22.55160361751236&y=113.9475423792024&url=https://32teeth.cn/mall/ads/index&removetitle=1"];
+    TSWebViewController *webVC = [[TSWebViewController alloc] initWithURL: @"http://32teeth.cn/doctor/api/dump?uid=40f595d7a10fbdeef11280cca5837bc8&token=88888888&x=22.55160361751236&y=113.9475423792024&url=https://32teeth.cn/mall/ads/index&removetitle=1"];
     webVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController: webVC animated: YES];
 }
 
 - (IBAction)singleWebViewController:(id)sender {
-    TSSingleWebViewController *webVC = [[TSSingleWebViewController alloc] initWithURL: @"http://32teeth.cn/doctor/api/dump?uid=40f595d7a10fbdeef11280cca5837bc8&token=eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiI0MGY1OTVkN2ExMGZiZGVlZjExMjgwY2NhNTgzN2JjODE0ODM2OTA3MzgzNjYifQ.4IwafHwqZBn2VulXOxsHnYddcxOGzjvd-DgNOHCO4dvzJ_-_QhKPSZ0hcQhUxhcqDNdfJkQYJNCsBn0SJTViyQ&x=22.55160361751236&y=113.9475423792024&url=https://32teeth.cn/mall/ads/index&removetitle=1"];
+    TSSingleWebViewController *webVC = [[TSSingleWebViewController alloc] initWithURL: @"http://32teeth.cn/doctor/api/dump?uid=40f595d7a10fbdeef11280cca5837bc8&token=88888888&x=22.55160361751236&y=113.9475423792024&url=https://32teeth.cn/mall/ads/index&removetitle=1"];
     webVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController: webVC animated: YES];
 }
