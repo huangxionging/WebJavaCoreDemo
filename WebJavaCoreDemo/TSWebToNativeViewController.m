@@ -23,7 +23,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview: self.webView];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString: @"http://32teeth.cn/index/test/close"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString: @"http://32teeth.cn/doctor/api/dump?uid=40f595d7a10fbdeef11280cca5837bc8&token=eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiI0MGY1OTVkN2ExMGZiZGVlZjExMjgwY2NhNTgzN2JjODE0ODM2OTA3MzgzNjYifQ.4IwafHwqZBn2VulXOxsHnYddcxOGzjvd-DgNOHCO4dvzJ_-_QhKPSZ0hcQhUxhcqDNdfJkQYJNCsBn0SJTViyQ&x=22.55160361751236&y=113.9475423792024&url=https://32teeth.cn/mall/ads/index&removetitle=1"]];
     request.cachePolicy = NSURLRequestReturnCacheDataElseLoad;
     [self.webView loadRequest: request];
     
@@ -54,7 +54,7 @@
     } name: @"xxx"];
     
     // 注入 js 代码 alert 会使用 TSWebView 中的 WKUIDelegate 加载
-    [weakSelf.webView addUserScript: [[WKUserScript alloc] initWithSource: @"function display_alert(){window.alert('I am an alert box!!')}" injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly: YES]];
+    [weakSelf.webView addUserScript: [[WKUserScript alloc] initWithSource: @"function display_alert(){alert('I am an alert box!!')}" injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly: YES]];
     
     // 注入 js 代码 为网页添加内容
     [weakSelf.webView addUserScript: [[WKUserScript alloc] initWithSource: @"function insertText(strText){\

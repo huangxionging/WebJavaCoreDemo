@@ -8,7 +8,7 @@
 
 #import "TSSingleWebViewController.h"
 #import <WebKit/WebKit.h>
-@interface TSSingleWebViewController ()<WKNavigationDelegate>
+@interface TSSingleWebViewController ()<WKNavigationDelegate, WKUIDelegate>
 
 /**
  url 地址
@@ -55,6 +55,7 @@
         rect.size.height -= 64;
         _webView = [[WKWebView alloc] initWithFrame: rect configuration: config];
         _webView.navigationDelegate = self;
+        _webView.UIDelegate = self;
     }
     return _webView;
 }
@@ -95,7 +96,7 @@
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     
     NSLog(@"%@", webView.URL.absoluteString);
-    NSString *host = webView.URL.host;
+//    NSString *host = webView.URL.host;
     
 }
 
@@ -118,6 +119,43 @@
 - (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView{
     
 }
+#pragma mark- WKUIDelegate
+#pragma mark - js allert
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler{
+    
+    
+    // 警告框控制器
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:message?:@"" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler();
+    }])];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
 
+#pragma mark- js 确认框
+- (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler{
+    //    DLOG(@"msg = %@ frmae = %@",message,frame);
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:message?:@"" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:([UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler(NO);
+    }])];
+    [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler(YES);
+    }])];
+    [self  presentViewController:alertController animated:YES completion:nil];
+}
+
+#pragma mark- 输入框
+- (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * _Nullable))completionHandler{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:prompt message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.text = defaultText;
+    }];
+    [alertController addAction:([UIAlertAction actionWithTitle:@"完成" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler(alertController.textFields[0].text?:@"");
+    }])];
+    [self  presentViewController:alertController animated:YES completion:nil];
+}
 
 @end
