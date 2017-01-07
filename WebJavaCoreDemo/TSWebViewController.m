@@ -108,17 +108,6 @@
     } else {
         decisionHandler(WKNavigationResponsePolicyAllow);
     }
-//    if (self.isShowFinished) {
-//        decisionHandler(WKNavigationResponsePolicyCancel);
-//        TSWebViewController *webViewController = [[TSWebViewController alloc] initWithURL: navigationResponse.response.URL.absoluteString];
-//        webViewController.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController: webViewController animated: YES];
-//    } else {
-//        
-//        decisionHandler(WKNavigationResponsePolicyAllow);
-//        self.isShowFinished = YES;
-//    }
-    
 }
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
