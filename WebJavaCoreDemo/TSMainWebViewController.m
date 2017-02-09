@@ -1,14 +1,14 @@
 //
 //  TSMainWebViewController.m
-//  WebJavaCoreDemo
+//  Hydrodent
 //
-//  Created by huangxiong on 2017/1/7.
-//  Copyright © 2017年 huangxiong. All rights reserved.
+//  Created by huangxiong on 2017/1/4.
+//  Copyright © 2017年 xiaoli. All rights reserved.
 //
 
 #import "TSMainWebViewController.h"
-
 #import <WebKit/WebKit.h>
+
 
 @interface TSMainWebViewController ()<WKNavigationDelegate, WKUIDelegate>
 
@@ -16,6 +16,16 @@
  url 地址
  */
 @property (nonatomic, copy) NSString *url;
+
+/**
+ memberId
+ */
+@property (nonatomic, copy) NSString *memberId;
+
+/**
+ token
+ */
+@property (nonatomic, copy) NSString *token;
 
 /**
  WKWebView
@@ -41,33 +51,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview: self.webView];
     self.isShowFinished = NO;
     
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle: @"关闭" style:UIBarButtonItemStylePlain target: self action: @selector(close)];
-    UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithTitle: @"返回" style:UIBarButtonItemStylePlain target: self action: @selector(back)];
-    self.navigationItem.leftBarButtonItems = @[item2, item1];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: @"web_close"] style:UIBarButtonItemStylePlain target: self action: @selector(close)];
+    UIBarButtonItem *iyem1 = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: @"web_back"] style:UIBarButtonItemStylePlain target: self action: @selector(back)];
+    self.navigationItem.leftBarButtonItems = @[iyem1, item];
     self.navigationController.interactivePopGestureRecognizer.delegate=(id)self;
     [self.webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString: self.url]]];
 }
-
-
-- (WKWebView *)webView {
-    if (_webView == nil) {
-        WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-        config.userContentController = [[WKUserContentController alloc] init];
-        CGRect rect = [UIScreen mainScreen].bounds;
-        rect.size.height -= 64;
-        _webView = [[WKWebView alloc] initWithFrame: rect configuration: config];
-        _webView.navigationDelegate = self;
-        _webView.UIDelegate = self;
-    }
-    return _webView;
-}
-
 
 - (void)back {
     [self.navigationController popViewControllerAnimated: YES];
@@ -77,19 +71,45 @@
     [self.navigationController popToRootViewControllerAnimated: YES];
 }
 
+
+- (WKWebView *)webView {
+    if (_webView == nil) {
+        WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+        config.userContentController = [[WKUserContentController alloc] init];
+        CGRect rect = [UIScreen mainScreen].bounds;
+        rect.size.height -= 64;
+
+        _webView = [[WKWebView alloc] initWithFrame: rect configuration: config];
+        _webView.navigationDelegate = self;
+        _webView.UIDelegate = self;
+    }
+    return _webView;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (NSString *)token {
+    return @"88888888";
+}
+
+- (NSString *)memberId {
+    return @"";
+}
+
+
 - (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
-    //    NSLog(@"%@", webView.URL.absoluteString);
     
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    //    NSLog(@"%@", webView.URL.absoluteString);
     self.isShowFinished = YES;
     self.navigationItem.title = self.webView.title;
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
     if (self.isShowFinished) {
         NSLog(@"%@", navigationAction.request.URL.absoluteString);
         decisionHandler(WKNavigationActionPolicyCancel);
@@ -99,47 +119,44 @@
     } else {
         decisionHandler(WKNavigationActionPolicyAllow);
     }
-    
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
-       NSLog(@"%@", webView.URL.absoluteString);
+    
     if (self.isShowFinished) {
         decisionHandler(WKNavigationResponsePolicyCancel);
     } else {
         decisionHandler(WKNavigationResponsePolicyAllow);
     }
+    
 }
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     
-    
-    //    NSLog(@"%@", webView.URL.absoluteString);
-    NSString *host = webView.URL.host;
+    NSLog(@"%@", webView.URL.absoluteString);
+//    NSString *host = webView.URL.host;
     
 }
 
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation {
-    //    NSLog(@"%@", webView.URL.absoluteString);
+    
 }
 
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
-    //    NSLog(@"%@", webView.URL.absoluteString);
+    
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
-    //    NSLog(@"%@", webView.URL.absoluteString);
+    
 }
 
 - (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
-    //    NSLog(@"%@", webView.URL.absoluteString);
     completionHandler(NSURLSessionAuthChallengeUseCredential, nil);
 }
 
 - (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView{
-    //    NSLog(@"%@", webView.URL.absoluteString);
+    
 }
-
 #pragma mark- WKUIDelegate
 #pragma mark - js allert
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler{
@@ -150,7 +167,7 @@
     [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         completionHandler();
     }])];
-    [self presentViewController:alertController animated:YES completion:nil];
+    [self  presentViewController:alertController animated:YES completion:nil];
     
 }
 
@@ -167,16 +184,6 @@
     [self  presentViewController:alertController animated:YES completion:nil];
 }
 
-#pragma mark- 输入框
-- (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * _Nullable))completionHandler{
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:prompt message:@"" preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.text = defaultText;
-    }];
-    [alertController addAction:([UIAlertAction actionWithTitle:@"完成" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        completionHandler(alertController.textFields[0].text?:@"");
-    }])];
-    [self  presentViewController:alertController animated:YES completion:nil];
-}
+
 
 @end
