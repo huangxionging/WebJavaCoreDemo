@@ -113,7 +113,10 @@
     if (self.isShowFinished) {
         NSLog(@"%@", navigationAction.request.URL.absoluteString);
         decisionHandler(WKNavigationActionPolicyCancel);
-        TSMainWebViewController *webViewController = [[TSMainWebViewController alloc] initWithURL: navigationAction.request.URL.absoluteString];
+        // 为什么写 [self class] 而不是 TSMainWebViewController?
+        // 因为写 TSMainWebViewController 会限制扩展性, 当我们需要继承 TSMainWebViewController 来实现某些功能时, [self class]
+        // 是 TSMainWebViewController 的子类, 仍然可以使用我们实现的某些功能.
+        TSMainWebViewController *webViewController = [[[self class] alloc] initWithURL: navigationAction.request.URL.absoluteString];
         webViewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController: webViewController animated: YES];
     } else {
