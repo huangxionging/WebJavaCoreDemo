@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F234D1961E2333D6005A2A37 /* TSMainWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F234D1951E2333D6005A2A37 /* TSMainWebViewController.m */; };
+		F234D1991E2333F0005A2A37 /* web_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F234D1971E2333F0005A2A37 /* web_back@2x.png */; };
+		F234D19A1E2333F0005A2A37 /* web_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F234D1981E2333F0005A2A37 /* web_close@2x.png */; };
 		F23B54A91E1DFC7200AA1664 /* TSWebToNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23B54A81E1DFC7200AA1664 /* TSWebToNativeViewController.m */; };
 		F24031371E1D026C00A9F482 /* TSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24031361E1D026C00A9F482 /* TSWebViewController.m */; };
 		F240313D1E1D244E00A9F482 /* TSSingleWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F240313C1E1D244E00A9F482 /* TSSingleWebViewController.m */; };
+<<<<<<< HEAD
 		F27BBEE51E213EAD0023AEDC /* TSMainWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BBEE31E213EAD0023AEDC /* TSMainWebViewController.m */; };
 		F27BBEE61E213EAD0023AEDC /* TSMainWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27BBEE41E213EAD0023AEDC /* TSMainWebViewController.xib */; };
 		F27BBEEA1E2225B10023AEDC /* TSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BBEE91E2225B10023AEDC /* TSNavigationController.m */; };
+=======
+>>>>>>> origin/master
 		F282CFAD1DEE6E1200FE7873 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFAC1DEE6E1200FE7873 /* main.m */; };
 		F282CFB01DEE6E1200FE7873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFAF1DEE6E1200FE7873 /* AppDelegate.m */; };
 		F282CFB31DEE6E1200FE7873 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFB21DEE6E1200FE7873 /* ViewController.m */; };
@@ -23,17 +29,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F234D1941E2333D6005A2A37 /* TSMainWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMainWebViewController.h; sourceTree = "<group>"; };
+		F234D1951E2333D6005A2A37 /* TSMainWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMainWebViewController.m; sourceTree = "<group>"; };
+		F234D1971E2333F0005A2A37 /* web_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "web_back@2x.png"; sourceTree = "<group>"; };
+		F234D1981E2333F0005A2A37 /* web_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "web_close@2x.png"; sourceTree = "<group>"; };
 		F23B54A71E1DFC7200AA1664 /* TSWebToNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWebToNativeViewController.h; sourceTree = "<group>"; };
 		F23B54A81E1DFC7200AA1664 /* TSWebToNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSWebToNativeViewController.m; sourceTree = "<group>"; };
 		F24031351E1D026C00A9F482 /* TSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWebViewController.h; sourceTree = "<group>"; };
 		F24031361E1D026C00A9F482 /* TSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSWebViewController.m; sourceTree = "<group>"; };
 		F240313B1E1D244E00A9F482 /* TSSingleWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSingleWebViewController.h; sourceTree = "<group>"; };
 		F240313C1E1D244E00A9F482 /* TSSingleWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSingleWebViewController.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		F27BBEE21E213EAD0023AEDC /* TSMainWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMainWebViewController.h; sourceTree = "<group>"; };
 		F27BBEE31E213EAD0023AEDC /* TSMainWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMainWebViewController.m; sourceTree = "<group>"; };
 		F27BBEE41E213EAD0023AEDC /* TSMainWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSMainWebViewController.xib; sourceTree = "<group>"; };
 		F27BBEE81E2225B10023AEDC /* TSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationController.h; sourceTree = "<group>"; };
 		F27BBEE91E2225B10023AEDC /* TSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationController.m; sourceTree = "<group>"; };
+=======
+>>>>>>> origin/master
 		F282CFA81DEE6E1200FE7873 /* WebJavaCoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebJavaCoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F282CFAC1DEE6E1200FE7873 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F282CFAE1DEE6E1200FE7873 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,11 +77,12 @@
 			children = (
 				F282CFCB1DEEA64D00FE7873 /* TSWebView.h */,
 				F282CFCC1DEEA64D00FE7873 /* TSWebView.m */,
+				F234D1941E2333D6005A2A37 /* TSMainWebViewController.h */,
+				F234D1951E2333D6005A2A37 /* TSMainWebViewController.m */,
+				F234D1971E2333F0005A2A37 /* web_back@2x.png */,
+				F234D1981E2333F0005A2A37 /* web_close@2x.png */,
 				F24031351E1D026C00A9F482 /* TSWebViewController.h */,
 				F24031361E1D026C00A9F482 /* TSWebViewController.m */,
-				F27BBEE21E213EAD0023AEDC /* TSMainWebViewController.h */,
-				F27BBEE31E213EAD0023AEDC /* TSMainWebViewController.m */,
-				F27BBEE41E213EAD0023AEDC /* TSMainWebViewController.xib */,
 				F240313B1E1D244E00A9F482 /* TSSingleWebViewController.h */,
 				F240313C1E1D244E00A9F482 /* TSSingleWebViewController.m */,
 			);
@@ -159,7 +173,7 @@
 				TargetAttributes = {
 					F282CFA71DEE6E1200FE7873 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = MZX9J7U5R6;
+						DevelopmentTeam = 6EW99E5PRN;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -188,8 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F282CFBB1DEE6E1200FE7873 /* LaunchScreen.storyboard in Resources */,
-				F27BBEE61E213EAD0023AEDC /* TSMainWebViewController.xib in Resources */,
 				F282CFB81DEE6E1200FE7873 /* Assets.xcassets in Resources */,
+				F234D1991E2333F0005A2A37 /* web_back@2x.png in Resources */,
+				F234D19A1E2333F0005A2A37 /* web_close@2x.png in Resources */,
 				F282CFB61DEE6E1200FE7873 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +221,7 @@
 				F240313D1E1D244E00A9F482 /* TSSingleWebViewController.m in Sources */,
 				F23B54A91E1DFC7200AA1664 /* TSWebToNativeViewController.m in Sources */,
 				F282CFB01DEE6E1200FE7873 /* AppDelegate.m in Sources */,
-				F27BBEE51E213EAD0023AEDC /* TSMainWebViewController.m in Sources */,
+				F234D1961E2333D6005A2A37 /* TSMainWebViewController.m in Sources */,
 				F282CFAD1DEE6E1200FE7873 /* main.m in Sources */,
 				F27BBEEA1E2225B10023AEDC /* TSNavigationController.m in Sources */,
 				F24031371E1D026C00A9F482 /* TSWebViewController.m in Sources */,
@@ -331,7 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MZX9J7U5R6;
+				DEVELOPMENT_TEAM = 6EW99E5PRN;
 				INFOPLIST_FILE = WebJavaCoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -344,7 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MZX9J7U5R6;
+				DEVELOPMENT_TEAM = 6EW99E5PRN;
 				INFOPLIST_FILE = WebJavaCoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
