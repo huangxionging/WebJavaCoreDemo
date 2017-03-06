@@ -23,9 +23,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview: self.webView];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString: @""]];
-    request.cachePolicy = NSURLRequestReturnCacheDataElseLoad;
-    [self.webView loadRequest: request];
+    [self.webView loadFileURL: [NSURL fileURLWithPath: [[NSBundle mainBundle] pathForResource: @"indexJS" ofType: @"html"]] allowingReadAccessToURL: [NSURL fileURLWithPath: [[NSBundle mainBundle] pathForResource: @"indexJS" ofType: @"js"]]];
     
     __weak typeof(self) weakSelf = self;
     
@@ -33,7 +31,6 @@
     [weakSelf.webView addScriptMessageHandlerBlock:^(WKScriptMessage *message) {
         NSLog(@"%@ === %@", message, [message body]);
         
-        // oc 调 js 代码 像写 fmdb 的 sql 语句
         NSString *jsFun = [NSString stringWithFormat:@"insertText('%@')", @"你好"];
         [weakSelf.webView evaluateJavaScript: jsFun completionHandler:^(id _Nullable dd, NSError * _Nullable error) {
             // 触发 js
@@ -43,7 +40,7 @@
         }];
         
         
-    } name: @"TEETH"];
+    } name: @"javascript"];
     
     // 添加 js 消息回调, 等待 js 调起原生
     [weakSelf.webView addScriptMessageHandlerBlock:^(WKScriptMessage *message) {

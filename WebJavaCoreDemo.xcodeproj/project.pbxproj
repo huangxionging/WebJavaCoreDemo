@@ -7,18 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F224F5981E6DB0EA00F0B717 /* indexJS.html in Resources */ = {isa = PBXBuildFile; fileRef = F224F5971E6DB0EA00F0B717 /* indexJS.html */; };
+		F224F59A1E6DB0FC00F0B717 /* indexJS.js in Resources */ = {isa = PBXBuildFile; fileRef = F224F5991E6DB0FC00F0B717 /* indexJS.js */; };
 		F234D1961E2333D6005A2A37 /* TSMainWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F234D1951E2333D6005A2A37 /* TSMainWebViewController.m */; };
 		F234D1991E2333F0005A2A37 /* web_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F234D1971E2333F0005A2A37 /* web_back@2x.png */; };
 		F234D19A1E2333F0005A2A37 /* web_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F234D1981E2333F0005A2A37 /* web_close@2x.png */; };
 		F23B54A91E1DFC7200AA1664 /* TSWebToNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23B54A81E1DFC7200AA1664 /* TSWebToNativeViewController.m */; };
 		F24031371E1D026C00A9F482 /* TSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24031361E1D026C00A9F482 /* TSWebViewController.m */; };
 		F240313D1E1D244E00A9F482 /* TSSingleWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F240313C1E1D244E00A9F482 /* TSSingleWebViewController.m */; };
-<<<<<<< HEAD
-		F27BBEE51E213EAD0023AEDC /* TSMainWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BBEE31E213EAD0023AEDC /* TSMainWebViewController.m */; };
-		F27BBEE61E213EAD0023AEDC /* TSMainWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27BBEE41E213EAD0023AEDC /* TSMainWebViewController.xib */; };
 		F27BBEEA1E2225B10023AEDC /* TSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BBEE91E2225B10023AEDC /* TSNavigationController.m */; };
-=======
->>>>>>> origin/master
 		F282CFAD1DEE6E1200FE7873 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFAC1DEE6E1200FE7873 /* main.m */; };
 		F282CFB01DEE6E1200FE7873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFAF1DEE6E1200FE7873 /* AppDelegate.m */; };
 		F282CFB31DEE6E1200FE7873 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFB21DEE6E1200FE7873 /* ViewController.m */; };
@@ -29,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F224F5971E6DB0EA00F0B717 /* indexJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = indexJS.html; sourceTree = "<group>"; };
+		F224F5991E6DB0FC00F0B717 /* indexJS.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = indexJS.js; sourceTree = "<group>"; };
 		F234D1941E2333D6005A2A37 /* TSMainWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMainWebViewController.h; sourceTree = "<group>"; };
 		F234D1951E2333D6005A2A37 /* TSMainWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMainWebViewController.m; sourceTree = "<group>"; };
 		F234D1971E2333F0005A2A37 /* web_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "web_back@2x.png"; sourceTree = "<group>"; };
@@ -39,14 +38,8 @@
 		F24031361E1D026C00A9F482 /* TSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSWebViewController.m; sourceTree = "<group>"; };
 		F240313B1E1D244E00A9F482 /* TSSingleWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSingleWebViewController.h; sourceTree = "<group>"; };
 		F240313C1E1D244E00A9F482 /* TSSingleWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSingleWebViewController.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		F27BBEE21E213EAD0023AEDC /* TSMainWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMainWebViewController.h; sourceTree = "<group>"; };
-		F27BBEE31E213EAD0023AEDC /* TSMainWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMainWebViewController.m; sourceTree = "<group>"; };
-		F27BBEE41E213EAD0023AEDC /* TSMainWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSMainWebViewController.xib; sourceTree = "<group>"; };
 		F27BBEE81E2225B10023AEDC /* TSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationController.h; sourceTree = "<group>"; };
 		F27BBEE91E2225B10023AEDC /* TSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationController.m; sourceTree = "<group>"; };
-=======
->>>>>>> origin/master
 		F282CFA81DEE6E1200FE7873 /* WebJavaCoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebJavaCoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F282CFAC1DEE6E1200FE7873 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F282CFAE1DEE6E1200FE7873 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +115,8 @@
 				F282CFAF1DEE6E1200FE7873 /* AppDelegate.m */,
 				F282CFB11DEE6E1200FE7873 /* ViewController.h */,
 				F282CFB21DEE6E1200FE7873 /* ViewController.m */,
+				F224F5971E6DB0EA00F0B717 /* indexJS.html */,
+				F224F5991E6DB0FC00F0B717 /* indexJS.js */,
 				F23B54A71E1DFC7200AA1664 /* TSWebToNativeViewController.h */,
 				F23B54A81E1DFC7200AA1664 /* TSWebToNativeViewController.m */,
 				F23B54A61E1DFC2900AA1664 /* TSWeb */,
@@ -203,7 +198,9 @@
 			files = (
 				F282CFBB1DEE6E1200FE7873 /* LaunchScreen.storyboard in Resources */,
 				F282CFB81DEE6E1200FE7873 /* Assets.xcassets in Resources */,
+				F224F5981E6DB0EA00F0B717 /* indexJS.html in Resources */,
 				F234D1991E2333F0005A2A37 /* web_back@2x.png in Resources */,
+				F224F59A1E6DB0FC00F0B717 /* indexJS.js in Resources */,
 				F234D19A1E2333F0005A2A37 /* web_close@2x.png in Resources */,
 				F282CFB61DEE6E1200FE7873 /* Main.storyboard in Resources */,
 			);
