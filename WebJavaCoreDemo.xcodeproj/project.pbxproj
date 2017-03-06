@@ -12,6 +12,7 @@
 		F240313D1E1D244E00A9F482 /* TSSingleWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F240313C1E1D244E00A9F482 /* TSSingleWebViewController.m */; };
 		F27BBEE51E213EAD0023AEDC /* TSMainWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BBEE31E213EAD0023AEDC /* TSMainWebViewController.m */; };
 		F27BBEE61E213EAD0023AEDC /* TSMainWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27BBEE41E213EAD0023AEDC /* TSMainWebViewController.xib */; };
+		F27BBEEA1E2225B10023AEDC /* TSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BBEE91E2225B10023AEDC /* TSNavigationController.m */; };
 		F282CFAD1DEE6E1200FE7873 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFAC1DEE6E1200FE7873 /* main.m */; };
 		F282CFB01DEE6E1200FE7873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFAF1DEE6E1200FE7873 /* AppDelegate.m */; };
 		F282CFB31DEE6E1200FE7873 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F282CFB21DEE6E1200FE7873 /* ViewController.m */; };
@@ -31,6 +32,8 @@
 		F27BBEE21E213EAD0023AEDC /* TSMainWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMainWebViewController.h; sourceTree = "<group>"; };
 		F27BBEE31E213EAD0023AEDC /* TSMainWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMainWebViewController.m; sourceTree = "<group>"; };
 		F27BBEE41E213EAD0023AEDC /* TSMainWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSMainWebViewController.xib; sourceTree = "<group>"; };
+		F27BBEE81E2225B10023AEDC /* TSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationController.h; sourceTree = "<group>"; };
+		F27BBEE91E2225B10023AEDC /* TSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationController.m; sourceTree = "<group>"; };
 		F282CFA81DEE6E1200FE7873 /* WebJavaCoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebJavaCoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F282CFAC1DEE6E1200FE7873 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F282CFAE1DEE6E1200FE7873 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +75,15 @@
 			name = TSWeb;
 			sourceTree = "<group>";
 		};
+		F27BBEE71E2225780023AEDC /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				F27BBEE81E2225B10023AEDC /* TSNavigationController.h */,
+				F27BBEE91E2225B10023AEDC /* TSNavigationController.m */,
+			);
+			name = Nav;
+			sourceTree = "<group>";
+		};
 		F282CF9F1DEE6E1100FE7873 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +103,7 @@
 		F282CFAA1DEE6E1200FE7873 /* WebJavaCoreDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F27BBEE71E2225780023AEDC /* Nav */,
 				F282CFAE1DEE6E1200FE7873 /* AppDelegate.h */,
 				F282CFAF1DEE6E1200FE7873 /* AppDelegate.m */,
 				F282CFB11DEE6E1200FE7873 /* ViewController.h */,
@@ -195,6 +208,7 @@
 				F282CFB01DEE6E1200FE7873 /* AppDelegate.m in Sources */,
 				F27BBEE51E213EAD0023AEDC /* TSMainWebViewController.m in Sources */,
 				F282CFAD1DEE6E1200FE7873 /* main.m in Sources */,
+				F27BBEEA1E2225B10023AEDC /* TSNavigationController.m in Sources */,
 				F24031371E1D026C00A9F482 /* TSWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
