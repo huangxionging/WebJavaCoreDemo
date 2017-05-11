@@ -60,7 +60,7 @@
 
 - (IBAction)multiWebViewController:(id)sender {
     
-    TSMainWebViewController *webVC = [[TSMainWebViewController alloc] initWithURL: @"http://dev-home.32teeth.cn/doctor/api/dump?uid=40f595d7a10fbdeef11280cca5837bc8&token=88888888&x=22.55042235655641&y=113.9477575238221&url=http%3A%2F%2Fdev-home.32teeth.cn%2Fdoctor%2Ffamily%2Fuserlist.html&removetitle=1"];
+    TSMainWebViewController *webVC = [[TSMainWebViewController alloc] initWithURL: @"http://32teeth.cn/blog/index/index/tid/21"];
     webVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController: webVC animated: YES];
 }

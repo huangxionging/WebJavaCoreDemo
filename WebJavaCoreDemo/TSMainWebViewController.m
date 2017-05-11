@@ -32,11 +32,6 @@
  */
 @property (nonatomic, strong) WKWebView *webView;
 
-/**
- 是否加载完成
- */
-@property (nonatomic, assign) BOOL isShowFinished;
-
 @end
 
 @implementation TSMainWebViewController
@@ -48,13 +43,21 @@
     return self;
 }
 
+- (void)back {
+    if (self.webView.backForwardList.backList.count == 0) {
+        [self.navigationController popViewControllerAnimated: YES];
+    } else {
+        [self.webView goBack];
+        self.navigationItem.title = self.webView.backForwardList.backItem.title;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview: self.webView];
-    self.isShowFinished = NO;
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: @"web_close"] style:UIBarButtonItemStylePlain target: self action: @selector(close)];
     UIBarButtonItem *iyem1 = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: @"web_back"] style:UIBarButtonItemStylePlain target: self action: @selector(back)];
@@ -63,9 +66,6 @@
     [self.webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString: self.url]]];
 }
 
-- (void)back {
-    [self.navigationController popViewControllerAnimated: YES];
-}
 
 - (void)close {
     [self.navigationController popToRootViewControllerAnimated: YES];
@@ -105,12 +105,13 @@
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    self.isShowFinished = YES;
+
     self.navigationItem.title = self.webView.title;
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    if (self.isShowFinished) {
+    NSLog(@"%@", navigationAction.request.URL.absoluteString);
+    if (navigationAction.navigationType == WKNavigationTypeLinkActivated) {
         NSLog(@"%@", navigationAction.request.URL.absoluteString);
         decisionHandler(WKNavigationActionPolicyCancel);
         // 为什么写 [self class] 而不是 TSMainWebViewController?
@@ -125,12 +126,12 @@
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
-    
-    if (self.isShowFinished) {
-        decisionHandler(WKNavigationResponsePolicyCancel);
-    } else {
-        decisionHandler(WKNavigationResponsePolicyAllow);
-    }
+    decisionHandler(WKNavigationResponsePolicyAllow);
+//    if (self.isShowFinished) {
+//        decisionHandler(WKNavigationResponsePolicyCancel);
+//    } else {
+//        
+//    }
     
 }
 
