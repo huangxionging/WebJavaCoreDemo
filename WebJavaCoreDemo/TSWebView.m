@@ -33,8 +33,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
-        WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-        config.userContentController = [[WKUserContentController alloc] init];
+//        WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+//        config.userContentController = [[WKUserContentController alloc] init];
         self.navigationDelegate = self;
         self.UIDelegate = self;
     }
@@ -85,6 +85,7 @@
 
 #pragma mark- 脚本删除消息 handler 回调
 - (void)removeScriptMessageHandlerBlockForName:(NSString *)name {
+    // 查找 block 是否存在
     if (self.blockDictionary[name]) {
         [self.blockDictionary removeObjectForKey: name];
         // 并删除脚本消息 handler 代理
