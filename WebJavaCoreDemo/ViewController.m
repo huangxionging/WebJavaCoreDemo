@@ -60,13 +60,13 @@
 
 - (IBAction)multiWebViewController:(id)sender {
     
-    TSMainWebViewController *webVC = [[TSMainWebViewController alloc] initWithURL: @"http://32teeth.cn/blog/index/index/tid/21"];
+    TSWebViewController *webVC = [[TSWebViewController alloc] initWithURL: @"http://3g.163.com/"];
     webVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController: webVC animated: YES];
 }
 
 - (IBAction)singleWebViewController:(id)sender {
-    TSSingleWebViewController *webVC = [[TSSingleWebViewController alloc] initWithURL: @"http://dcloud.io/hellomui/"];
+    TSWebViewController *webVC = [[TSWebViewController alloc] initWithURL: @"http://dcloud.io/hellomui/"];
     webVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController: webVC animated: YES];
 }
